@@ -29,13 +29,20 @@
     "babel-loader": "^8.1.0",
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "react": "^16.8.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "scripts": {
+    "lint": "prettier src/index.js README.md -c",
     "build": "webpack --mode production"
   }
 }
