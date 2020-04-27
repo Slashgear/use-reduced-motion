@@ -27,7 +27,7 @@ npm install
 
 ## Author
 
-👤 **Antoine CARON <antoine.caron@bedrockstreaming.com>**
+👤 **Antoine CARON <antoine395.caron@gmail.com>**
 
 - Website: http://slashgear.github.io/
 - Twitter: [@Slashgear\_](https://twitter.com/Slashgear_)
@@ -39,7 +39,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2020 [Antoine CARON <antoine.caron@bedrockstreaming.com>](https://github.com/Slashgear).<br />
+Copyright © 2020 [Antoine CARON <antoine395.caron@gmail.com>](https://github.com/Slashgear).<br />
 This project is [MIT](https://github.com/Slashgear/use-reduce-motion/blob/master/LICENSE) licensed.
 
 ---
