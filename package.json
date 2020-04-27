@@ -43,6 +43,7 @@
   },
   "scripts": {
     "lint": "prettier src/index.js README.md -c",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "postversion": "git push --tags"
   }
 }
