@@ -1,0 +1,41 @@
+{
+  "name": "use-reduce-motion",
+  "version": "1.0.0",
+  "description": "React hook to detect user reduce motion feature",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "author": "Antoine CARON <antoine.caron@bedrockstreaming.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Slashgear/use-reduce-motion"
+  },
+  "keywords": [
+    "react-hooks",
+    "hooks",
+    "react",
+    "utils",
+    "lib",
+    "a11y",
+    "accessibility"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "react": "^16.8.0"
+  },
+  "scripts": {
+    "build": "webpack --mode production"
+  }
+}
