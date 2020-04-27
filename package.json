@@ -1,6 +1,6 @@
 {
   "name": "use-reduce-motion",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React hook to detect user reduce motion feature",
   "main": "dist/bundle.js",
   "files": [
