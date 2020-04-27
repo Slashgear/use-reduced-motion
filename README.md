@@ -13,7 +13,7 @@
     <img alt="License: MIT" src="https://img.shields.io/github/license/Slashgear/use-reduce-motion" />
   </a>
   <a href="https://twitter.com/Slashgear\_" target="_blank">
-    <img alt="Twitter: Slashgear\_" src="https://img.shields.io/twitter/follow/Slashgear\_.svg?style=social" />
+    <img alt="Twitter: Slashgear_" src="https://img.shields.io/twitter/follow/Slashgear_.svg?style=social" />
   </a>
 </p>
 
