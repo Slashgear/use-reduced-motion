@@ -2,10 +2,10 @@
   "object" == typeof exports && "object" == typeof module
     ? (module.exports = t(require("react")))
     : "function" == typeof define && define.amd
-    ? define("useReduceMotion", ["react"], t)
+    ? define("useReducedMotion", ["react"], t)
     : "object" == typeof exports
-    ? (exports.useReduceMotion = t(require("react")))
-    : (e.useReduceMotion = t(e.react));
+    ? (exports.useReducedMotion = t(require("react")))
+    : (e.useReducedMotion = t(e.react));
 })(window, function (e) {
   return (function (e) {
     var t = {};
@@ -69,7 +69,7 @@
     function (e, t, r) {
       "use strict";
       r.r(t),
-        r.d(t, "useReduceMotion", function () {
+        r.d(t, "useReducedMotion", function () {
           return c;
         });
       var n = r(0);

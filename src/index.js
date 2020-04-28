@@ -4,7 +4,7 @@ const REDUCE_MOTION_MEDIA = "(prefers-reduced-motion: reduce)";
 
 const mediaQuery = window && window.matchMedia(REDUCE_MOTION_MEDIA);
 
-export const useReduceMotion = () => {
+export const useReducedMotion = () => {
   const [state, setState] = useState(false);
 
   const listener = useCallback(() => {

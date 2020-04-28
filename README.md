@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to use-reduced-motion 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/use-reduce-motion" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/use-reduce-motion.svg">
+  <a href="https://www.npmjs.com/package/use-reduced-motion" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/use-reduced-motion.svg">
   </a>
   <a href="https://github.com/Slashgear/use-reduce-motion#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
@@ -22,7 +22,24 @@
 ## Install
 
 ```sh
-npm install
+npm install use-reduced-motion
+yarn add use-reduced-motion
+```
+
+## Usage
+
+Use directly in your component.
+Pass the boolean value to your JS animated component to stop it.
+
+```jsx
+import React from "react";
+import { useReducedMotion } from "use-reduced-motion";
+import { AnimatedDiv } from "../somewhere";
+
+export const MyExampleComponent = () => {
+  const stopMotion = useReducedMotion();
+  return <AnimatedDiv pause={stopMotion} />;
+};
 ```
 
 ## Author

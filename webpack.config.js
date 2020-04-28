@@ -6,7 +6,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     libraryTarget: "umd",
-    library: "useReduceMotion",
+    library: "useReducedMotion",
     umdNamedDefine: true,
   },
   module: {
@@ -23,7 +23,5 @@ module.exports = {
       },
     ],
   },
-  externals: [
-      /react/
-  ]
+  externals: [/react/],
 };
