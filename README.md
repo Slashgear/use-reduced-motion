@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to use-reduce-motion 👋</h1>
+<h1 align="center">Welcome to use-reduced-motion 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/use-reduce-motion" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/use-reduce-motion.svg">
@@ -17,7 +17,7 @@
   </a>
 </p>
 
-> React hook to detect user reduce motion feature
+> React hook to detect user reduced motion feature
 
 ## Install
 

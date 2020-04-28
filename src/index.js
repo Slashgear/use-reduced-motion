@@ -17,7 +17,7 @@ export const useReduceMotion = () => {
     return () => {
       mediaQuery.removeEventListener("change", listener);
     };
-  }, []);
+  }, [listener]);
 
   return state;
 };
