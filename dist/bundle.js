@@ -70,7 +70,7 @@
       "use strict";
       r.r(t),
         r.d(t, "useReducedMotion", function () {
-          return c;
+          return i;
         });
       var n = r(0);
       function o(e, t) {
@@ -108,7 +108,7 @@
             if ("string" == typeof e) return u(e, t);
             var r = Object.prototype.toString.call(e).slice(8, -1);
             "Object" === r && e.constructor && (r = e.constructor.name);
-            if ("Map" === r || "Set" === r) return Array.from(r);
+            if ("Map" === r || "Set" === r) return Array.from(e);
             if (
               "Arguments" === r ||
               /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
@@ -127,30 +127,33 @@
         for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r];
         return n;
       }
-      var i = window && window.matchMedia("(prefers-reduced-motion: reduce)"),
-        c = function () {
-          var e = o(Object(n.useState)(!1), 2),
-            t = e[0],
-            r = e[1],
-            u = Object(n.useCallback)(function () {
-              r(!!i.matches);
-            }, []);
-          return (
-            Object(n.useEffect)(
-              function () {
-                return (
-                  r(!!i.matches),
-                  i.addEventListener("change", u),
-                  function () {
-                    i.removeEventListener("change", u);
-                  }
-                );
-              },
-              [u]
-            ),
-            t
-          );
-        };
+      var i = function () {
+        var e = o(Object(n.useState)(!1), 2),
+          t = e[0],
+          r = e[1],
+          u = Object(n.useRef)(
+            window
+              ? window.matchMedia("(prefers-reduced-motion: reduce)")
+              : null
+          ).current;
+        return (
+          Object(n.useEffect)(
+            function () {
+              var e = function () {
+                r(!!u.matches);
+              };
+              return (
+                u.addEventListener("change", e),
+                function () {
+                  u.removeEventListener("change", e);
+                }
+              );
+            },
+            [u]
+          ),
+          t
+        );
+      };
     },
   ]);
 });

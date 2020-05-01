@@ -1,23 +1,21 @@
-import { useState, useCallback, useEffect } from "react";
-
-const REDUCE_MOTION_MEDIA = "(prefers-reduced-motion: reduce)";
-
-const mediaQuery = window && window.matchMedia(REDUCE_MOTION_MEDIA);
+import { useState, useRef, useEffect } from "react";
 
 export const useReducedMotion = () => {
-  const [state, setState] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
-  const listener = useCallback(() => {
-    setState(!!mediaQuery.matches);
-  }, []);
+  const { current: mediaQuery } = useRef(
+    window ? window.matchMedia("(prefers-reduced-motion: reduce)") : null
+  );
 
   useEffect(() => {
-    setState(!!mediaQuery.matches);
+    const listener = () => {
+      setPrefersReducedMotion(!!mediaQuery.matches);
+    };
     mediaQuery.addEventListener("change", listener);
     return () => {
       mediaQuery.removeEventListener("change", listener);
     };
-  }, [listener]);
+  }, [mediaQuery]);
 
-  return state;
+  return prefersReducedMotion;
 };
