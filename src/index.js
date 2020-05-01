@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 export const useReducedMotion = () => {
-  const [state, setState] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const { current: mediaQuery } = useRef(
     window ? window.matchMedia("(prefers-reduced-motion: reduce)") : null
@@ -9,7 +9,7 @@ export const useReducedMotion = () => {
 
   useEffect(() => {
     const listener = () => {
-      setState(!!mediaQuery.matches);
+      setPrefersReducedMotion(!!mediaQuery.matches);
     };
     mediaQuery.addEventListener("change", listener);
     return () => {
@@ -17,5 +17,5 @@ export const useReducedMotion = () => {
     };
   }, [mediaQuery]);
 
-  return state;
+  return prefersReducedMotion;
 };
