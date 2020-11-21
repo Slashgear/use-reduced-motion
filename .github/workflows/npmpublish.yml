@@ -36,7 +36,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/slashgear
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@slashgear"
       - run: npm install
       - run: npm publish
         env:
