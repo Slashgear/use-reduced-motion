@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: @slashgear
+          scope: "@slashgear"
       - run: jq --arg package "@slashgear/use-reduced-motion" '.name = $package' package.json > package-changed.json && mv package-changed.json package.json
       - run: yarn install
       - run: yarn publish
