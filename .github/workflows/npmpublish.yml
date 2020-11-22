@@ -39,7 +39,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@slashgear"
       - run: npm install
-      - run: echo registry=https://npm.pkg.github.com/YOUR_USERNAME >> .npmrc
+      - run: echo registry=https://npm.pkg.github.com/Slashgear >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
