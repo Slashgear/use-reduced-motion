@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export const useReducedMotion = () => {
+export function useReducedMotion(): boolean {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const { current: mediaQuery } = useRef(
@@ -18,4 +18,4 @@ export const useReducedMotion = () => {
   }, [mediaQuery]);
 
   return prefersReducedMotion;
-};
+}
