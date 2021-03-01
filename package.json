@@ -1,6 +1,6 @@
 {
   "name": "use-reduced-motion",
-  "version": "1.1.10",
+  "version": "2.0.0",
   "description": "React hook to detect user reduce motion feature",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -41,7 +41,7 @@
     "format": "prettier src/index.ts README.md -c",
     "lint": "yarn eslint . --ext .ts,.tsx",
     "build": "tsc --listEmittedFiles",
-    "version": "yarn build && git add dist",
+    "version": "yarn build",
     "postversion": "git push origin && git push --tags"
   }
 }
