@@ -24,23 +24,6 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: yarn install
-      - run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: "@slashgear"
-      - run: npm install
-      - run: jq --arg package "@slashgear/use-reduced-motion" '.name = $package' package.json > package-changed.json && mv package-changed.json package.json
-      - run: echo registry=https://npm.pkg.github.com/@slashgear >> .npmrc
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

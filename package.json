@@ -10,6 +10,10 @@
     "type": "git",
     "url": "https://github.com/Slashgear/use-reduce-motion"
   },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
   "keywords": [
     "react-hooks",
     "hooks",
