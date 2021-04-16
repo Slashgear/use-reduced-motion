@@ -1,6 +1,6 @@
 {
   "name": "use-reduced-motion",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React hook to detect user reduce motion feature",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
