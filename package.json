@@ -36,11 +36,6 @@
   "peerDependencies": {
     "react": "^16.8.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "scripts": {
     "format": "prettier src/index.ts README.md -c",
     "lint": "yarn eslint . --ext .ts,.tsx",
