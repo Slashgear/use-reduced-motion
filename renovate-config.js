@@ -1,5 +1,7 @@
+/**
+ *
+ */
 module.exports = {
-    dryRun: true,
     username: 'renovate-release',
     gitAuthor: 'Renovate Bot <bot@renovateapp.com>',
     onboarding: false,
@@ -19,6 +21,7 @@ module.exports = {
                 'major',
                 'lockFileMaintenance',
             ],
+            addLabels: 'sentinel',
             dependencyDashboardApproval: false,
             stabilityDays: 0,
         },
